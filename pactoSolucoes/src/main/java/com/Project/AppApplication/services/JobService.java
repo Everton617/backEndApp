@@ -23,6 +23,10 @@ public class JobService {
         return jobRepository.findAll();
     }
 
+    public List<Job> getJobsByCompanyId(Long companyId) {
+        return jobRepository.findByCompanyId(companyId);
+    }
+
     public Job registerCandidateToJob(Long jobId, Long candidatoId) {
         // Busca o job pelo ID
         Optional<Job> jobOptional = jobRepository.findById(jobId);
@@ -51,4 +55,5 @@ public class JobService {
         // Retorna o job atualizado
         return job;
     }
+
 }

@@ -41,7 +41,7 @@ public class CompanyService {
             throw new IllegalArgumentException("O email da empresa é obrigatório.");
         }
 
-        if (company.getName() == null || company.getName().isEmpty()) {
+        if (company.getNome() == null || company.getNome().isEmpty()) {
             throw new IllegalArgumentException("O nome da empresa é obrigatório.");
         }
 

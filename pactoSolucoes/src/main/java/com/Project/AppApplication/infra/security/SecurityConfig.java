@@ -1,7 +1,5 @@
 package com.Project.AppApplication.infra.security;
 
-import com.Project.AppApplication.infra.security.company.CustomCompanyDetailsService;
-import com.Project.AppApplication.infra.security.company.SecurityFilterCompany;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

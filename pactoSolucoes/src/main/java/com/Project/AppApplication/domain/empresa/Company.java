@@ -1,5 +1,6 @@
 package com.Project.AppApplication.domain.empresa;
 
+import com.Project.AppApplication.domain.LoginUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -11,12 +12,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "company")
-public class Company {
+public class Company implements LoginUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    private String nome;
     private String email;
 
     public String getRole() {
@@ -50,12 +51,12 @@ public class Company {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.nome = name;
     }
 
     public String getPassword() {

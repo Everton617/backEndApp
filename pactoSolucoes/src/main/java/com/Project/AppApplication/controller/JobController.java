@@ -22,6 +22,11 @@ public class JobController {
         return ResponseEntity.ok(jobs);
     }
 
+    @GetMapping("/companies/{companyId}")
+    public List<Job> getJobsByCompany(@PathVariable Long companyId) {
+        return jobService.getJobsByCompanyId(companyId);
+    }
+
     @PostMapping("/{jobId}/register/{candidatoId}")
     public ResponseEntity<Job> registerCandidateToJob(
             @PathVariable Long jobId,

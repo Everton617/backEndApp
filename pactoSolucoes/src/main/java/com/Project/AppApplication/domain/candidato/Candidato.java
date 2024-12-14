@@ -1,5 +1,6 @@
 package com.Project.AppApplication.domain.candidato;
 
+import com.Project.AppApplication.domain.LoginUser;
 import com.Project.AppApplication.domain.empresa.Job;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -16,7 +17,7 @@ import java.util.List;
 @Table(name = "candidato")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Candidato {
+public class Candidato implements LoginUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
